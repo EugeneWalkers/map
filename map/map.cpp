@@ -4,39 +4,6 @@
 #include <string>
 #include <iostream>
 
-//int main(int argc, char* argv[])
-//{
-//	if (argc > 3) {
-//		string way = argv[1];
-//		string doc = argv[2];
-//		string endfile = argv[3];
-//		cout << way << endl << doc << endl << argc << endl;
-//		for (int i = 0; i < way.size(); i++) {
-//			if (way[i] == '\\') {
-//				way[i] = '/';
-//			}
-//		}
-//		cout << way << endl << doc << endl << argc << endl;
-//		if (way[way.size() - 1] != '/') {
-//			way.append("/");
-//		}
-//		cout << way << endl << doc << endl << argc << endl;
-//		if (way[3] != '/') {
-//			way.insert(way.begin() + 3, '/');
-//		}
-//		cout << way << endl << doc << endl << argc << endl;
-//		ifstream fin(way+doc);
-//		int v = 1;
-//		string t;
-//		ofstream out(way+endfile);
-//		while (fin >> t) {
-//			out << t << ends << v << endl;
-//		}
-//		out.close();
-//		fin.close();
-//	}
-//    return 0;
-//}
 
 int main() {
 
@@ -44,7 +11,9 @@ int main() {
 	bool wasSpec = true;
 	bool wasText = false;
 	for (t; std::getline(std::cin, t);) {
+		t += ".";
 		for (int i = 0; i < t.length(); i++) {
+			
 			if (t[i] >= 97 && t[i] <= 122) {
 				std::cout << t[i];
 				wasSpec = false;
@@ -72,7 +41,7 @@ int main() {
 				wasSpec = true;
 			}
 		}
-		if (wasText) {
+		if (wasText && !wasSpec) {
 			std::cout << "\t" << 1 << std::endl;
 		}
 	}
