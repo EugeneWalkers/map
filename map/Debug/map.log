@@ -1,6 +1,6 @@
 ﻿  stdafx.cpp
   map.cpp
-f:\уп c++\map\map\map.cpp(15): warning C4018: '<': signed/unsigned mismatch
+f:\уп c++\map\map\map.cpp(17): warning C4018: '<': signed/unsigned mismatch
   Generating Code...
   map.vcxproj -> F:\УП c++\map\Debug\map.exe
   map.vcxproj -> F:\УП c++\map\Debug\map.pdb (Full PDB)

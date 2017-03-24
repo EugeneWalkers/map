@@ -11,7 +11,8 @@ int main() {
 	bool wasSpec = true;
 	bool wasText = false;
 	for (t; std::getline(std::cin, t);) {
-		t += ".";
+		wasSpec = true;
+		wasText = false;
 		for (int i = 0; i < t.length(); i++) {
 			
 			if (t[i] >= 97 && t[i] <= 122) {
